@@ -1,9 +1,17 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-
 module.exports = {
-  /* Your site config here */
+
+  siteMetadata: {
+    title: 'Master Painter',
+    author: 'Sunny Ra'
+  },
+
+  plugins: [
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        includePaths: ['src/styles/index.scss'], 
+      }
+    }
+  ]
 }

@@ -1,0 +1,25 @@
+@import '../../styles/variables.scss';
+
+header {
+    width: 100vw;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: $background-color;
+
+    .logoContainer {
+
+        .logo {
+            width: 200px;   
+        }
+    }
+
+    .bars {
+        font-size: 2em;
+        border: none;
+        cursor: pointer;
+        background: transparent;
+        color: $font-color-grey;
+    }
+}

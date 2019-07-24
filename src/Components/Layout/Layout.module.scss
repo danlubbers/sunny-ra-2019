@@ -1,0 +1,19 @@
+body {
+    margin: 0 auto;
+    // background-color: yellow;
+    
+
+    .container {
+        // center things left to right
+        margin: 0 auto;
+        max-width: 100vw;
+        display: flex;
+        flex-direction: column;
+        min-height: 98vh;
+    }
+
+    .content {
+        // Flex Grow creates the sticky footer in conjunction with display, flex and min-height in container above
+        flex-grow: 1;
+    }
+}
