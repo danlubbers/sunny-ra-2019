@@ -1,0 +1,55 @@
+$font-size: .9em;
+$font-color:  rgb(204, 151, 128);
+$font-color-grey: rgb(175, 175, 175);
+$font-color-hover: rgb(241, 177, 149);
+$background-color: rgb(25, 25, 25);
+$font: 'Montserrat', sans-serif;
+
+.exhibition-container-mobile {
+    margin: 0 auto;
+    padding-bottom: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: $background-color;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    
+    .awards-container-mobile {
+        width: 100%;
+    
+        h3 {
+            margin: 15px 0px 10px 10px;
+            font-family: $font;
+            line-height: 20px;
+            letter-spacing: 1.5px;
+            font-size: 1em;
+            color: rgb(100, 100, 100);
+            text-transform: uppercase;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        ul {
+            width: 90%;
+            margin: 0 auto;
+            padding: 0px;
+            list-style: none;
+            li {
+                margin: 0 auto;
+                font-family: $font;
+                font-size: .8em;
+                color: $font-color-grey;
+                line-height: 20px;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .exhibition-history-mobile {
+        @extend .awards-container-mobile;
+    }
+}

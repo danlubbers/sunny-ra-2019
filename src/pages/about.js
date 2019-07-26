@@ -4,7 +4,7 @@ import Head from '../Components/Head/Head';
 
 import AboutStyles from '../styles/about.module.scss';
 
-const AboutMobile = () => {
+const About = () => {
 
     let email = 'sunnyra23@gmail.com';
 
@@ -46,4 +46,4 @@ const AboutMobile = () => {
     )
 }
 
-export default AboutMobile;
+export default About;

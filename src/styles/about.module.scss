@@ -6,9 +6,9 @@ $background-color: rgb(25, 25, 25);
 $font: 'Montserrat', sans-serif;
 
 .about-container-mobile {
+    margin: 0 auto;
     width: 100%;
     height: 100%;
-    margin: 0 auto;
     background-color: $background-color;
     display: flex;
     justify-content: flex-start;
@@ -59,7 +59,7 @@ $font: 'Montserrat', sans-serif;
         h3 {
             padding: 0px 10px 0px 10px;
             color: rgb(100, 100, 100);
-                text-transform: uppercase;
+            text-transform: uppercase;
         }
         h4 {
             padding: 0px 15px 0px 15px;

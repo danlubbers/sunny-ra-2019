@@ -176,7 +176,7 @@ class Header extends Component {
                             <div className={HeaderStyles.horizontalLine}></div>
                             <Link to="/about"><button className={HeaderStyles.aboutMobileBtn} onClick={this.handleClickMobile} >About</button></Link>
                             <div className={HeaderStyles.horizontalLine}></div>
-                            <Link to="/exhibitionmobile"><button className={HeaderStyles.exhibitionsMobileBtn} onClick={this.handleClickMobile}>Exhibitions</button></Link>
+                            <Link to="/exhibition"><button className={HeaderStyles.exhibitionsMobileBtn} onClick={this.handleClickMobile}>Exhibitions</button></Link>
                             <div className={HeaderStyles.horizontalLine}></div>
                         </ul>
 
