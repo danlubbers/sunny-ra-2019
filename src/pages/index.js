@@ -5,12 +5,12 @@ import Head from '../Components/Head/Head';
 
 const IndexPage = () => {
     return (
-        <div className='booger'>
+        <>
             <Layout>
-                <Head title="Home"/>
+                <Head title="Sunny Ra"/>
                 <Home />
             </Layout>
-        </div>
+        </>
     )
 }
 
