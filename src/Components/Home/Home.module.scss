@@ -9,5 +9,9 @@
     .mobileImages {
         padding-top: 20px;
         width: 90%
+
     }
+        @media (min-width: 965px) {
+            width: 80%;
+        }
 }

@@ -21,6 +21,10 @@ header {
         cursor: pointer;
         background: transparent;
         color: $font-color-grey;
+
+        @media (min-width: #{$screen-lg}) {
+            display: none;
+        }
     }
 }
 
@@ -179,20 +183,19 @@ align-items: flex-end;
 }
 
 .slidePainting {
-background-color: $background-color;
-width: 100px;
-height: 215px;
-display: flex;
-flex-direction: column;
-justify-content: flex-start;
-align-items: center;
-position: absolute;
-top: -250px;
-left: -10px;
-transition: .15 ease-in-out;
-opacity: 0;
-transition-property: opacity;
-z-index: -1;
+    margin: 20px 0px 0px 28px;
+    width: 20%;
+    // height: 215px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    transition: .15 ease-in-out;
+    opacity: 0;
+    transition-property: opacity;
+    z-index: -1;
+    background-color: $background-color;
 
 @media (max-width: #{$screen-lg}) {
     display: none;
@@ -202,6 +205,10 @@ li {
     margin: 10px 5px 10px 0px;
     font-size: 1em;
     cursor: pointer;
+
+}
+a {
+    text-decoration: none;
 }
 }
 
@@ -238,6 +245,7 @@ z-index: 50;
 }
 
 .slideWorks {
+    margin: 20px 0px 0px 45px;
     background-color: $background-color;
     width: 150px;
     height: 150px;
@@ -265,6 +273,9 @@ z-index: 50;
         margin: 10px 5px 10px 0px;
         font-size: 1em;
         cursor: pointer;
+    }
+    a {
+        text-decoration: none;
     }
    }
 
@@ -303,6 +314,7 @@ z-index: 50;
     }
 
     .slideGallery {
+        margin: 20px 0px 0px 40px;
         background-color: $background-color;
         width: 200px;
         height: 70px;
@@ -330,6 +342,9 @@ z-index: 50;
             margin: 10px 5px 10px 0px;
             font-size: 1em;
             cursor: pointer;
+        }
+        a {
+            text-decoration: none;
         }
     }
 
@@ -371,6 +386,7 @@ li {
     font-family: $font;
     margin-left: 25px;
     color: $font-color-grey;
+    list-style: none;
 
     @media (max-width: #{$screen-xl}) {
         margin-left: 10px;;
@@ -388,9 +404,6 @@ li:hover {
     background: none;
     border: none;
     padding: 0;
-
-    
-    
 }
 .aboutBtn:hover {
     color: $font-color-hover;

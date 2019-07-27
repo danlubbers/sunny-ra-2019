@@ -106,13 +106,13 @@ class Header extends Component {
 
     render() {
         // let email = 'sunnyra23@gmail.com'
-        let {showAbout, showPainting, showWorks, showGallery, showExhibitions, showMobile} = this.state;
+        let {/*showAbout,*/ showPainting, showWorks, showGallery, /*showExhibitions,*/ showMobile} = this.state;
         let mobileDropDown = showMobile ? `${HeaderStyles.slideMobile} ${HeaderStyles.slideMobilePosition}` : `${HeaderStyles.slideMobile}`;
         // let exhibitionsDropdown = showExhibitions ?  'slide-exhibitions slide-exhibitions-position' : 'slide-exhibitions';
         // let aboutDropDown = showAbout ? 'slide-about slide-about-position' : 'slide-about';
-        // let paintingDropDown = showPainting ? 'slide-painting slide-painting-position' : 'slide-painting';
-        // let worksDropDown = showWorks ? 'slide-works slide-works-position' : 'slide-works';
-        // let galleryDropDown = showGallery ? 'slide-gallery slide-gallery-position' : 'slide-gallery';
+        let paintingDropDown = showPainting ? `${HeaderStyles.slidePainting} ${HeaderStyles.slidePaintingPosition}` : `${HeaderStyles.slidePainting}`;
+        let worksDropDown = showWorks ? `${HeaderStyles.slideWorks} ${HeaderStyles.slideWorksPosition}` : `${HeaderStyles.slideWorks}`;
+        let galleryDropDown = showGallery ? `${HeaderStyles.slideGallery} ${HeaderStyles.slideGalleryPosition}` : `${HeaderStyles.slideGallery}`;
 
         return (
             <header className={HeaderStyles.header}>
@@ -179,9 +179,36 @@ class Header extends Component {
                             <Link to="/exhibition"><button className={HeaderStyles.exhibitionsMobileBtn} onClick={this.handleClickMobile}>Exhibitions</button></Link>
                             <div className={HeaderStyles.horizontalLine}></div>
                         </ul>
-
                     </div>
                 </div>
+                <nav>
+                    <ul>     
+                        <button aria-label="Paintings" className={HeaderStyles.paintingBtn} onMouseOver={this.handleOverPainting} >Paintings</button>
+                            <div className={paintingDropDown} onMouseLeave={this.handleLeave}>
+                                <Link to='/paintings2006'><li>2006</li></Link>
+                                <Link to='/paintings2008'><li>2008</li></Link>
+                                <Link to='/paintings2010'><li>2010</li></Link>
+                                <Link to='/paintings2012'><li>2012</li></Link>
+                                <Link to='/paintings2014'><li>2014</li></Link>
+                                <Link to='/paintings2015'><li>2015</li></Link>
+                            </div>
+                       <button aria-label="Works On Paper" className={HeaderStyles.worksBtn} onMouseOver={this.handleOverWorks}>Works On Paper</button>
+                            <div className={worksDropDown} onMouseLeave={this.handleLeave}>
+                                <Link to='/works2006'><li>2006</li></Link>
+                                <Link to='/works2009'><li>2009</li></Link>
+                                <Link to='/works2012'><li>2012</li></Link>
+                                <Link to='/works2016'><li>2016</li></Link>
+                            </div>
+                        <button aria-label="Photo Gallery" className={HeaderStyles.galleryBtn} onMouseOver={this.handleOverGallery}>Photo Gallery</button>
+                            <div className={galleryDropDown} onMouseLeave={this.handleLeave}>
+                                <Link to='/installation'><li>Installation Photos</li></Link>
+                                <Link to='/studentwork'><li>Student Work</li></Link>
+                                </div>
+                        <Link to='/commissioned'><button className={HeaderStyles.commissionBtn} onClick={this.handleLeave}>Commissioned Work</button></Link>
+                        <li><button aria-label="About Section" className={HeaderStyles.aboutBtn} onClick={this.handleClickAbout} >About</button></li>
+                        <li><button aria-label="Exhibitions"  className={HeaderStyles.exhibitionsBtn} onClick={this.handleClickExhibitions} >Exhibitions</button></li>
+                    </ul>
+                </nav>
             </header>
         )
     }
